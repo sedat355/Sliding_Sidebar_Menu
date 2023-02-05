@@ -16,10 +16,36 @@ body {
     background-position: center;
     font-family: 'Poppins', sans-serif;
 }
+.menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transform: translate(20px, 20px);
+    transition: all .5s ease;
+}
+#check:checked + .menu-icon {
+    transform: translate(-200px, 20px);
+}
+.menu-icon i {
+    color: #219ebc;
+    font-size: 40px;
+    font-weight: bold;
+}
 .container {
+    position: fixed;
+    top: 0; left: 0;
     height: 100vh;
     width: 333px;
     background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .container {
+    transform: translateX(0%);
 }
 .container nav {
     position: relative;
@@ -32,7 +58,7 @@ nav .header {
     height: 70px;
     padding: 0 20px;
     color: whitesmoke;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.8);
     display: flex; align-items: center; justify-content: baseline;
 }
 .header label {
@@ -43,7 +69,8 @@ nav .header {
 .header i {
     color: #ae2012;
     font-size: 30px;
-    margin-left: auto;
+    margin-left: 50px;
+    cursor: pointer;
 }
 nav ul li {
     height: 55px;
