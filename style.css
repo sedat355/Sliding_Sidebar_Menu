@@ -2,7 +2,75 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Reem+Kufi+Ink&family=Rubik+Dirt&display=swap');
 
-
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    background-image: url(/img/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    height: 100vh;
+    width: 333px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.container nav {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+}
+nav .header {
+    height: 70px;
+    padding: 0 20px;
+    color: whitesmoke;
+    border-bottom: 2px solid #219ebc;
+    display: flex; align-items: center; justify-content: baseline;
+}
+.header label {
+    color: #219ebc;
+    font-family: 'Rubik Dirt', sans-serif;
+    font-size: 30px;
+}
+.header i {
+    color: #ae2012;
+    font-size: 30px;
+    margin-left: auto;
+}
+nav ul {
+    margin: 20px 0;
+}
+nav ul li {
+    height: 55px;
+    line-height: 55px;
+    margin-bottom: 5px;
+    transition: all .3s ease;
+}
+nav ul li:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 10px solid #219ebc;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+}
+nav ul li a {
+    display: flex; align-items: center;
+    color: whitesmoke;
+    width: 100%;
+    padding-left: 15px;
+    transition: all .3s ease;
+}
+nav ul li a i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.social-media {
+    margin-top: auto;
+}
 
 
 
